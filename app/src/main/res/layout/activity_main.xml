@@ -1,0 +1,115 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+
+    <TextView
+        android:id="@+id/file_content_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#666"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="这是保存的内容" />
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="请输入你要保存的内容"
+        app:layout_constraintBottom_toTopOf="@id/create_table_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/write_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/write_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onWriteClick"
+        android:text="写出"
+        app:layout_constraintBottom_toBottomOf="@id/edit_text"
+        app:layout_constraintLeft_toRightOf="@id/edit_text"
+        app:layout_constraintRight_toLeftOf="@id/read_btn"
+        app:layout_constraintTop_toTopOf="@id/edit_text" />
+
+    <Button
+        android:id="@+id/read_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onReadClick"
+        android:text="读入"
+        app:layout_constraintBottom_toBottomOf="@id/edit_text"
+        app:layout_constraintLeft_toRightOf="@id/write_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edit_text" />
+
+    <Button
+        android:id="@+id/create_table_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="onCreateTableClick"
+        android:text="创建表"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text" />
+
+    <Button
+        android:id="@+id/insert_table_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="onInsertTableClick"
+        android:text="增"
+        app:layout_constraintBottom_toBottomOf="@id/create_table_btn"
+        app:layout_constraintLeft_toRightOf="@id/create_table_btn"
+        app:layout_constraintRight_toLeftOf="@id/delete_table_btn"
+        app:layout_constraintTop_toTopOf="@id/create_table_btn" />
+
+    <Button
+        android:id="@+id/delete_table_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="onDeleteTableClick"
+        android:text="删"
+        app:layout_constraintBottom_toBottomOf="@id/insert_table_btn"
+        app:layout_constraintLeft_toRightOf="@id/insert_table_btn"
+        app:layout_constraintRight_toLeftOf="@id/update_table_btn"
+        app:layout_constraintTop_toTopOf="@id/insert_table_btn" />
+
+    <Button
+        android:id="@+id/update_table_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="onUpdateTableClick"
+        android:text="改"
+        app:layout_constraintBottom_toBottomOf="@id/delete_table_btn"
+        app:layout_constraintLeft_toRightOf="@id/delete_table_btn"
+        app:layout_constraintRight_toLeftOf="@id/query_table_btn"
+        app:layout_constraintTop_toTopOf="@id/delete_table_btn" />
+
+    <Button
+        android:id="@+id/query_table_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="onQueryTableClick"
+        android:text="查"
+        app:layout_constraintBottom_toBottomOf="@id/update_table_btn"
+        app:layout_constraintLeft_toRightOf="@id/update_table_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/update_table_btn" />
+
+    <TextView
+        android:id="@+id/query_database_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#666"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/create_table_btn"
+        tools:text="查询数据库中的内容" />
+</android.support.constraint.ConstraintLayout>
